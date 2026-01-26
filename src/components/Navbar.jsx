@@ -49,7 +49,7 @@ const Navbar = () => {
     return (
         <>
             <nav className="bg-black ">
-               <div className='max-w-7xl mx-auto text-white px-5 md:px-10 py-3 flex items-center justify-between'>
+               <div className='max-w-7xl mx-auto text-white px-5 md:px-10  lg:px-0 py-3 flex items-center justify-between'>
                  <div className="flex items-center text-2xl md:text-3xl font-bold tracking-tight">
                     <span className='z-10'>Web</span>
                     <span className=' bg-[#00f2ad] -ms-1 rounded-3xl  shadow-[0_0_15px_rgba(0,242,173,0.5)] px-1 mt-3'>
