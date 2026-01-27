@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// Register ScrollTrigger plugin
+
 gsap.registerPlugin(ScrollTrigger);
 
 const StatisticsSection = () => {
@@ -17,7 +17,6 @@ const StatisticsSection = () => {
   ];
 
   useGSAP(() => {
-    // Target all elements with the 'stat-number' class
     const counters = gsap.utils.toArray('.stat-number');
 
     counters.forEach((counter) => {
@@ -26,10 +25,10 @@ const StatisticsSection = () => {
       gsap.to(counter, {
         innerText: targetValue,
         duration: 2,
-        snap: { innerText: 1 }, // Forces the number to increment by whole integers
+        snap: { innerText: 1 },
         scrollTrigger: {
           trigger: counter,
-          start: "top 85%", // Starts animation when the number is near the bottom of viewport
+          start: "top 85%", 
           toggleActions: "play none none none",
         },
       });

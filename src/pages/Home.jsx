@@ -2,8 +2,30 @@ import React from 'react'
 import { FaGithub, FaLinkedinIn, FaTwitter } from 'react-icons/fa'
 import ServicesSection from '../components/ServicesSection'
 import StatisticsSection from '../components/StatisticsSection'
+import ProjectCard from '../components/ProjectCard'
+import { Link } from 'react-router-dom'
+import AboutMe from '../components/AboutMe'
+import TechSlider from '../components/TechSlider'
 
 function Home() {
+
+  const projects = [
+    {
+      title: "Corporate Business Website",
+      tags: ["corporate", "responsive"],
+      imageSrc: "/homebg.jpg",
+      link: "/"
+    },
+    {
+      title: "SaaS Product Dashboard",
+      tags: ["saas", "interface"],
+      imageSrc: "/homebg2.jpg",
+      link: "/"
+    }
+  ];
+
+
+
   return (
     <div className="relative">
       <section
@@ -41,7 +63,7 @@ function Home() {
               </p>
 
               <div className="flex flex-wrap gap-4 py-4">
-                <button className="bg-gray-600 hover:bg-white/20 backdrop-blur-md font-semibold text-white px-8 py-3 rounded-md transition-all border border-white/10">
+                <button className="bg-zinc-800 hover:bg-white/20 backdrop-blur-md font-semibold text-white px-8 py-3 rounded-md transition-all border border-white/10">
                   Get a Free Quote
                 </button>
                 <button className="border border-[#00f2ad] hover:bg-[#00f2ad] font-semibold hover:text-black text-white px-8 py-3 rounded-md transition-all">
@@ -93,10 +115,27 @@ function Home() {
             </div>
           </div>
         </div>
-        <ServicesSection/>
+        <ServicesSection />
       </section>
 
-      <StatisticsSection/>
+      <StatisticsSection />
+
+
+      <section className='max-w-6xl mx-auto'>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          {projects.map((p, i) => <ProjectCard key={i} {...p} />)}
+        </div>
+        <p className='text-white font-medium py-16 text-center'>
+          Have a project in mind? <Link to="" className='brand-color'>
+            Let’s work together
+          </Link>
+        </p>
+      </section>
+
+
+      <AboutMe/>
+
+      <TechSlider/>
     </div>
   )
 }
