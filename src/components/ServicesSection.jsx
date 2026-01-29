@@ -7,7 +7,7 @@ const ServicesSection = () => {
             description: "Custom-built websites & applications designed for speed, scalability.",
             icon: (
                 <svg className="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13p8M5 17p4a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
             ),
         },
@@ -16,7 +16,7 @@ const ServicesSection = () => {
             description: "User-focused interface designs that balance visual clarity user experience.",
             icon: (
                 <svg className="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 5a1 1 0 011-1p4a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1pa1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
                 </svg>
             ),
             active: true
@@ -33,7 +33,7 @@ const ServicesSection = () => {
     ];
 
     return (
-        <section className="bg-zinc-950 py-24 px-6 overflow-hidden">
+        <section className="bg-zinc-950 pt-24 py-16 px-6 overflow-hidden">
             <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                 <div className="lg:col-span-4">
                     <div className="space-y-4">
@@ -41,8 +41,8 @@ const ServicesSection = () => {
                             <div
                                 key={index}
                                 className={`p-6 rounded-2xl transition-all duration-300 flex gap-6 ${service.active
-                                        ? 'bg-zinc-900/80 border border-zinc-800 shadow-2xl'
-                                        : 'bg-transparent border border-transparent'
+                                    ? 'bg-zinc-900/80 border border-zinc-800 shadow-2xl'
+                                    : 'bg-transparent border border-transparent'
                                     }`}
                             >
                                 <div className="shrink-0 w-12 h-12 rounded-lg  border border-zinc-800 flex items-center justify-center">
@@ -60,7 +60,7 @@ const ServicesSection = () => {
                 </div>
 
                 <div className="lg:col-span-4">
-                    <h2 className="text-5xl font-bold">
+                    <p className="text-5xl font-bold">
                         <span className="block text-transparent "
                             style={{
                                 WebkitTextStroke: '2px #00f2ad',
@@ -69,7 +69,7 @@ const ServicesSection = () => {
                             Core Services
                             Offered
                         </span>
-                    </h2>
+                    </p>
                     <div className="rounded-3xl overflow-hidden mt-16">
                         <img
                             src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1000"

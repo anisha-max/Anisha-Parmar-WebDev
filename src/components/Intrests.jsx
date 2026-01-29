@@ -59,9 +59,9 @@ const Intrests = () => {
             <span className="w-2 h-2 rounded-full bg-[#00FFCA]"></span>
             <span className="text-zinc-400 text-sm font-medium uppercase tracking-widest">Work Process</span>
           </div>
-          <h2 className="text-5xl  font-bold leading-tight">
+          <p className="text-5xl  font-bold leading-tight">
             How Projects Are Delivered Efficiently
-          </h2>
+          </p>
           <p className="text-zinc-400 text-lg max-w-md leading-relaxed">
             A transparent and structured workflow designed to keep projects organized, collaborative, and delivered on time.
           </p>

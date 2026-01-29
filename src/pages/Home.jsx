@@ -29,7 +29,7 @@ function Home() {
   return (
     <div className="relative">
       <section
-        className="relative lg:h-screen w-full flex items-center justify-center bg-fixed bg-center bg-cover bg-no-repeat pb-10"
+        className="relative  min-h-screen bg-fixed w-full flex items-center justify-center  bg-center bg-cover bg-no-repeat pb-10"
         style={{
           backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.9) 100%), url('/homebg.jpg')`
         }}
@@ -37,26 +37,26 @@ function Home() {
         <div className="max-w-7xl mx-auto ">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-40 items-baseline-last">
             <div className="text-white text-end max-w-md">
-              <h1 className="text-6xl md:text-9xl font-semibold ">
+              <p className="text-6xl md:text-9xl font-semibold ">
                 Build
-              </h1>
-              <h1 className="text-6xl md:text-9xl font-semibold  text-transparent bg-clip-text"
+              </p>
+              <p className="text-6xl md:text-9xl font-semibold  text-transparent bg-clip-text"
                 style={{
                   WebkitTextStroke: '2px #00f2ad',
                   color: 'transparent'
                 }}>
                 Digital
-              </h1>
-              <h1 className="text-6xl md:text-9xl font-semibold ">
+              </p>
+              <p className="text-6xl md:text-9xl font-semibold ">
                 Futures
-              </h1>
+              </p>
 
             </div>
 
             <div className="text-white space-y-3 max-w-md ">
-              <h2 className="text-3xl font-semibold">
+              <p className="text-3xl font-semibold">
                 Innovate. Develop. <br /> Succeed. Fast.
-              </h2>
+              </p>
               <p className="text-gray-300 text-lg ">
                 Transform your ideas into cutting-edge web solutions.
                 We craft high-performance websites and applications tailored to your business.

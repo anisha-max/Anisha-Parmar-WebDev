@@ -9,8 +9,7 @@ const Navbar = () => {
     const navLinks = [
         { name: 'Home', to: "/" },
         { name: 'About Me', to: "/about" },
-        { name: 'Achievement', to: "/achievement" },
-        { name: 'GitHub', to: "/github" },
+        { name: 'Achievements', to: "/achievements" },
         { name: 'Projects', to: "/projects" },
     ];
     const [isOpen, setIsOpen] = useState(false);
@@ -76,7 +75,7 @@ const Navbar = () => {
                     </button>
                 </div>
 
-                <Link to="/" className="group hidden lg:flex items-center gap-2 border-2  border-[#00f2ad] hover:bg-[#00f2ad]  hover:border-[#1e1e1e] hover:text-black rounded-full pl-6 pr-2 py-2 transition-all duration-300">
+                <Link to="/contact" className="group hidden lg:flex items-center gap-2 border-2  border-[#00f2ad] hover:bg-[#00f2ad]  hover:border-[#1e1e1e] hover:text-black rounded-full pl-6 pr-2 py-2 transition-all duration-300">
                     <span className="text-sm font-semibold">Contact</span>
                     <IoArrowForwardCircleOutline
                         size={28}

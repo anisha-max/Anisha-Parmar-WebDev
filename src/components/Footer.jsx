@@ -7,7 +7,7 @@ const Footer = () => {
     return (
         <footer className=" text-white py-6 px-5 md:px-10 overflow-hidden">
             <div className="flex flex-col md:flex-row items-baseline justify-end gap-4 select-none">
-                <h2 
+                <p 
                     className="text-6xl md:text-[8rem] lg:text-[10rem] font-black tracking-tighter"
                     style={{
                         WebkitTextStroke: '2px #00f2ad',
@@ -15,10 +15,10 @@ const Footer = () => {
                     }}
                 >
                     Web
-                </h2>
-                <h2 className="text-6xl md:text-[6rem] lg:text-[8rem] font-black tracking-tighter text-white">
+                </p>
+                <p className="text-6xl md:text-[6rem] lg:text-[8rem] font-black tracking-tighter text-white">
                     Developer
-                </h2>
+                </p>
             </div>
 
             <div className="flex gap-8 my-5">

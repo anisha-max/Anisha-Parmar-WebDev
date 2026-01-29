@@ -23,13 +23,7 @@ const AboutMe = () => {
             duration: 1,
             stagger: 0.2,
             ease: "power3.out",
-        }).from(".reveal-img", {
-            scale: 0.9,
-            opacity: 0,
-            duration: 1,
-            stagger: 0.2,
-            ease: "power3.out"
-        }, "-=0.8");
+        })
 
     }, { scope: containerRef });
 
@@ -43,9 +37,9 @@ const AboutMe = () => {
                     </div>
               <div className=" flex flex-col md:flex-row justify-between items-start gap-8 mb-8">
                 <div className="max-w-2xl">
-                    <h2 className="reveal-text text-5xl font-bold leading-tight">
+                    <p className="reveal-text text-5xl font-bold leading-tight">
                         Developer Driven by Purpose and Precision
-                    </h2>
+                    </p>
                 </div>
                 <p className="reveal-text text-gray-400  md:max-w-xs md:mt-0 leading-relaxed">
                     I'm a web developer focused on building meaningful digital experiences. With years of hands-on experience, I turn complex ideas into clean, functional solutions.

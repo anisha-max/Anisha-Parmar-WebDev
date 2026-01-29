@@ -16,24 +16,31 @@ const StatisticsSection = () => {
     { label: "Long Term Client Trust and Satisfaction", value: 100, suffix: "%" },
   ];
 
-  useGSAP(() => {
-    const counters = gsap.utils.toArray('.stat-number');
+useGSAP(() => {
+  const counters = gsap.utils.toArray(".stat-number");
 
-    counters.forEach((counter) => {
-      const targetValue = parseInt(counter.getAttribute('data-target'));
+  ScrollTrigger.create({
+    trigger: containerRef.current,
+    start: "top 70%",
+    once: true, // 🔥 important
+    onEnter: () => {
+      counters.forEach((counter) => {
+        const target = +counter.dataset.target;
 
-      gsap.to(counter, {
-        innerText: targetValue,
-        duration: 2,
-        snap: { innerText: 1 },
-        scrollTrigger: {
-          trigger: counter,
-          start: "top 85%", 
-          toggleActions: "play none none none",
-        },
+        gsap.fromTo(
+          counter,
+          { textContent: 0 },
+          {
+            textContent: target,
+            duration: 1.8,
+            ease: "power1.out",
+            snap: { textContent: 1 },
+          }
+        );
       });
-    });
-  }, { scope: containerRef });
+    },
+  });
+}, { scope: containerRef });
 
   return (
     <section ref={containerRef} className=" text-white py-24 px-6">
@@ -67,9 +74,9 @@ const StatisticsSection = () => {
         </div>
         
         <div className="lg:col-span-6">
-          <h2 className="text-5xl font-bold leading-tight max-w-md mx-auto">
+          <p className="text-5xl font-bold leading-tight max-w-md mx-auto">
             Crafting Scalable Digital Products That Perform
-          </h2>
+          </p>
         </div>
 
         <div className="lg:col-span-3 flex items-end">
