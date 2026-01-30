@@ -11,14 +11,14 @@ function Home() {
 
   const projects = [
     {
-      title: "Corporate Business Website",
-      tags: ["corporate", "responsive"],
+      title: "Ride booking web application",
+      tags: ["MERN", "Tailwind" ,"Google Map Api" , "Socket.io"],
       imageSrc: "/homebg.jpg",
       link: "/"
     },
     {
-      title: "SaaS Product Dashboard",
-      tags: ["saas", "interface"],
+      title: "Video Streaming Platform",
+      tags: ["NextJs" ,"NextAuth", "Tailwind" , "ImageKit"],
       imageSrc: "/homebg2.jpg",
       link: "/"
     }
@@ -38,37 +38,36 @@ function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-40 items-baseline-last">
             <div className="text-white text-end max-w-md">
               <p className="text-6xl md:text-9xl font-semibold ">
-                Build
+                Innovate
               </p>
               <p className="text-6xl md:text-9xl font-semibold  text-transparent bg-clip-text"
                 style={{
                   WebkitTextStroke: '2px #00f2ad',
                   color: 'transparent'
                 }}>
-                Digital
+                Build
               </p>
               <p className="text-6xl md:text-9xl font-semibold ">
-                Futures
+                Deploy
               </p>
 
             </div>
 
             <div className="text-white space-y-3 max-w-md ">
               <p className="text-3xl font-semibold">
-                Innovate. Develop. <br /> Succeed. Fast.
+                Talk Less , <br /> Ship more.
               </p>
               <p className="text-gray-300 text-lg ">
-                Transform your ideas into cutting-edge web solutions.
-                We craft high-performance websites and applications tailored to your business.
+                Building high-performance web applications with clean architecture, scalable systems, and a strong focus on real-world impact and user experience.
               </p>
 
               <div className="flex flex-wrap gap-4 py-4">
                 <button className="bg-zinc-800 hover:bg-white/20 backdrop-blur-md font-semibold text-white px-8 py-3 rounded-md transition-all border border-white/10">
-                  Get a Free Quote
+                  Download Resume
                 </button>
-                <button className="border border-[#00f2ad] hover:bg-[#00f2ad] font-semibold hover:text-black text-white px-8 py-3 rounded-md transition-all">
-                  Our Services
-                </button>
+                <Link to="/projects" className="border border-[#00f2ad] hover:bg-[#00f2ad] font-semibold hover:text-black text-white px-8 py-3 rounded-md transition-all">
+                  View Projects
+                </Link>
               </div>
             </div>
           </div>
@@ -78,17 +77,17 @@ function Home() {
           </div>
           <div className='lg:flex justify-between text-gray-300 pt-10'>
             <div className='border-l-2 px-5 border-[#00f2ad] max-w-md'>
-              Trusted by businesses to build reliable digital products that grow.
+              Passionate Frontend Developer with 1+ year of experience, expanding into full-stack development.
             </div>
             <div className='flex justify-around gap-5'>
               <div className='flex items-center gap-2'>
-                <a href="#" className="text-[#00f2ad] hover:text-gray-300 transition-colors text-lg border border-gray-600 rounded-md p-1"><FaGithub /></a> Github
+                <a href="https://github.com/anisha-max" target='_blank' className="text-[#00f2ad] hover:text-gray-300 transition-colors text-lg border border-gray-600 rounded-md p-1"><FaGithub /></a> Github
               </div>
               <div className='flex items-center gap-2'>
-                <a href="#" className="text-[#00f2ad] hover:text-gray-300 transition-colors text-lg border border-gray-600 rounded-md p-1"><FaTwitter /></a> Tweeter
+                <a href="https://www.linkedin.com/in/anisha-parmar-997160309/" target='_blank' className="text-[#00f2ad] hover:text-gray-300 transition-colors text-lg border border-gray-600 rounded-md p-1"><FaLinkedinIn /></a> Linkedin
               </div>
               <div className='flex items-center gap-2'>
-                <a href="#" className="text-[#00f2ad] hover:text-gray-300 transition-colors text-lg border border-gray-600 rounded-md p-1"><FaLinkedinIn /></a> Linkedin
+                <a href="https://x.com/anisha_par23007" target='_blank' className="text-[#00f2ad] hover:text-gray-300 transition-colors text-lg border border-gray-600 rounded-md p-1"><FaTwitter /></a> Tweeter
 
               </div>
             </div>
@@ -103,14 +102,15 @@ function Home() {
             <div className='lg:col-span-1'>
               <div className='flex items-center gap-2'>
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                <p>
+                <p className='font-semibold text-lg'>
                   My Core Expertise
                 </p>
               </div>
             </div>
             <div className='lg:col-span-2'>
+              
               <p className='text-4xl font-semibold '>
-                I help businesses and founders turn ideas into functional, scalable digital products. Every project is built with performance, clarity, and long-term growth in mind.
+                Web Developer building full-stack applications using MERN and Next.js, focused on performance, scalability, and real-world use cases.
               </p>
             </div>
           </div>
@@ -126,16 +126,16 @@ function Home() {
           {projects.map((p, i) => <ProjectCard key={i} {...p} />)}
         </div>
         <p className='text-white font-medium py-16 text-center'>
-          Have a project in mind? <Link to="" className='brand-color'>
+          Have a project in mind? <Link to="/contact" className='brand-color'>
             Let’s work together
           </Link>
         </p>
       </section>
 
 
-      <AboutMe/>
+      <AboutMe />
 
-      <TechSlider/>
+      <TechSlider />
     </div>
   )
 }

@@ -1,39 +1,30 @@
 import React from 'react';
+import { FiLayers, FiMonitor, FiZap } from 'react-icons/fi';
 
 const ServicesSection = () => {
-    const services = [
-        {
-            title: "Web Development",
-            description: "Custom-built websites & applications designed for speed, scalability.",
-            icon: (
-                <svg className="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13p8M5 17p4a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-            ),
-        },
-        {
-            title: "UI UX",
-            description: "User-focused interface designs that balance visual clarity user experience.",
-            icon: (
-                <svg className="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 5a1 1 0 011-1p4a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1pa1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
-                </svg>
-            ),
-            active: true
-        },
-        {
-            title: "Web Optimization",
-            description: "Performance, SEO, & code optimization to ensure fast load times.",
-            icon: (
-                <svg className="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-            ),
-        }
-    ];
+const services = [
+  {
+    title: "Frontend Development",
+    description: "Building responsive, high-performance user interfaces using React, Next.js, Tailwind CSS, and Bootstrap.",
+    icon: <FiMonitor className="w-6 h-6 text-emerald-400" />,
+  },
+  {
+    title: "Full-Stack Development",
+    description: "Developing end-to-end web applications using MERN and Next.js, including APIs, authentication, and real-time features.",
+    icon: <FiLayers className="w-6 h-6 text-emerald-400" />,
+    active: true
+  },
+  {
+  title: "Performance & Optimization",
+  description:
+    "Improving application performance by reducing load times, optimizing assets, and writing efficient, maintainable code.",
+  icon: <FiZap className="w-6 h-6 text-emerald-400" />,
+}
+];
+
 
     return (
-        <section className="bg-zinc-950 pt-24 py-16 px-6 overflow-hidden">
+        <section className=" pt-24 py-16 px-6 overflow-hidden">
             <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                 <div className="lg:col-span-4">
                     <div className="space-y-4">
@@ -72,7 +63,7 @@ const ServicesSection = () => {
                     </p>
                     <div className="rounded-3xl overflow-hidden mt-16">
                         <img
-                            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1000"
+                            src="/home3.jpg"
                             alt="Team collaboration"
                             className="w-full h-110 object-cover"
                         />
@@ -82,7 +73,7 @@ const ServicesSection = () => {
                 <div className="lg:col-span-4">
                     <div className="rounded-3xl overflow-hidden ">
                         <img
-                            src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000"
+                            src="/home4.jpg"
                             alt="Team meeting"
                             className="w-full h-110 object-cover"
                         />

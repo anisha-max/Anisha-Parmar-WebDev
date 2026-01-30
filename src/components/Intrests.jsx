@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -65,9 +66,9 @@ const Intrests = () => {
           <p className="text-zinc-400 text-lg max-w-md leading-relaxed">
             A transparent and structured workflow designed to keep projects organized, collaborative, and delivered on time.
           </p>
-          <button className="mt-4 w-fit px-8 py-3 rounded-xl bg-zinc-800/80 text-white font-medium hover:bg-zinc-700 transition-all border border-zinc-700/50">
-            Get a Free Quote
-          </button>
+          <Link to="/achievements" className="mt-4 w-fit px-8 py-3 rounded-xl bg-zinc-800/80 text-white font-medium hover:bg-zinc-700 transition-all border border-zinc-700/50">
+          Achievements
+          </Link>
         </div>
 
 

@@ -54,19 +54,19 @@ const ProjectCard = ({ title, tags, imageSrc ,link}) => {
                         </svg>
                     </div>
 
-                    {/* UI/UX Overlay Tag (Visible on Hover) */}
+         
                     <div className="absolute bottom-6 left-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                         <span className="text-white font-medium text-sm">UI UX</span>
                     </div>
                 </div>
 
-                {/* Footer Details */}
+  
                 <div className="flex items-start justify-between">
                     <h3 className="text-2xl font-bold text-white max-w-62 leading-tight">
                         {title}
                     </h3>
 
-                    <div className="flex gap-2">
+                    <div className="flex flex-wrap justify-end gap-2">
                         {tags.map((tag) => (
                             <span
                                 key={tag}

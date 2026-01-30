@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Link } from 'react-router-dom';
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -9,12 +10,13 @@ gsap.registerPlugin(ScrollTrigger);
 const StatisticsSection = () => {
   const containerRef = useRef(null);
 
-  const stats = [
-    { label: "Years of Professional Web Development Experience", value: 8, suffix: "+" },
-    { label: "Successful Websites & Digital Projects Delivered", value: 120, suffix: "+" },
-    { label: "Industries Served Across Global Business Markets", value: 15, suffix: "+" },
-    { label: "Long Term Client Trust and Satisfaction", value: 100, suffix: "%" },
-  ];
+const stats = [
+  { label: "Years of Development Experience", value: 1, suffix: "+" },
+  { label: "Production-Ready Projects Built", value: 10, suffix: "+" },
+  { label: "Tech Stack Experience (MERN, Next.js, etc.)", value: 8, suffix: "+" },
+  { label: "Focus on Performance & Maintainability", value: 100, suffix: "%" },
+];
+
 
 useGSAP(() => {
   const counters = gsap.utils.toArray(".stat-number");
@@ -43,7 +45,7 @@ useGSAP(() => {
 }, { scope: containerRef });
 
   return (
-    <section ref={containerRef} className=" text-white py-24 px-6">
+    <section ref={containerRef} className=" text-white py-16 px-6">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-32">
         {stats.map((stat, index) => (
           <div key={index} className="border-l-2 border-gray-800  pl-6 space-y-6">
@@ -67,7 +69,7 @@ useGSAP(() => {
       </div>
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 ">
         <div className="lg:col-span-3">
-          <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-gray-400">
+          <div className="flex items-center gap-2 text-lg  text-white font-semibold">
             <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
             Selected Projects
           </div>
@@ -75,14 +77,16 @@ useGSAP(() => {
         
         <div className="lg:col-span-6">
           <p className="text-5xl font-bold leading-tight max-w-md mx-auto">
-            Crafting Scalable Digital Products That Perform
+           Building High-Performance, Scalable Digital Experiences
           </p>
         </div>
 
-        <div className="lg:col-span-3 flex items-end">
-          <p className="text-gray-400 ">
-            Each project reflects a strategic approach to problem solving and user experience. 
-            I focus on building fast, scalable, and visually refined web solutions.
+        <div className="lg:col-span-3 flex flex-col justify-between">
+                   <Link to="/projects" className="border border-[#00f2ad] hover:bg-[#00f2ad] font-semibold py-3 px-8 hover:text-black text-white rounded-md transition-all ms-auto">
+                  View All Projects
+                </Link>
+          <p className="text-gray-400 pt-5">
+       Each project demonstrates a thoughtful approach to problem-solving and user experience. I specialize in creating fast, scalable, and visually polished web solutions.
           </p>
         </div>
       </div>

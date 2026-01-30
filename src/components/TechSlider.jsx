@@ -2,16 +2,22 @@ import React, { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
-// Replace these with your actual dev technology logos
 const logos = [
-  { name: "Glovix", icon: "🦊" },
-  { name: "crevox", icon: "💠" },
-  { name: "Markon", icon: "🌙" },
-  { name: "Brandex", icon: "📦" },
-  { name: "Nexora", icon: "🔼" },
-  { name: "React", icon: "⚛️" },
-  { name: "Tailwind", icon: "🌊" },
+  { name: "NodeJs" },
+  { name: "ExpressJS" },
+  { name: "MongoDB" },
+  { name: "Socket.io" },
+  { name: "Redux" },
+  { name: "Tailwind" },
+  { name: "Bootstrap" },
+  { name: "React" },
+  { name: "TypeScript" },
+  { name: "JavaScript" },
+  { name: "CSS" },
+  { name: "HTML" },
 ];
+
+
 
 const TechSlider = () => {
   const sliderRef = useRef(null);
@@ -20,15 +26,15 @@ const TechSlider = () => {
     const slider = sliderRef.current;
     if (!slider) return;
 
-    // Clone the logos list to create a seamless loop
+  
     const totalWidth = slider.scrollWidth / 2;
 
-    // GSAP infinite horizontal scroll animation
+
     gsap.to(slider, {
-      x: `-=${totalWidth}`, // Move left by half the total width
-      duration: 30, // Adjust for speed (higher = slower)
+      x: `-=${totalWidth}`, 
+      duration: 30, 
       ease: "none",
-      repeat: -1, // Infinite loop
+      repeat: -1, 
       onReverseComplete: () => {
         gsap.set(slider, { x: 0 });
       }
@@ -46,8 +52,8 @@ const TechSlider = () => {
             key={index} 
             className="flex items-center gap-4 opacity-50 hover:opacity-100 transition-opacity duration-300"
           >
-            <span className="text-4xl grayscale brightness-150">{logo.icon}</span>
-            <span className="text-2xl font-bold text-zinc-400 uppercase tracking-widest">
+            {/* <span className="text-4xl grayscale brightness-150">{logo.icon}</span> */}
+            <span className="text-2xl font-bold text-zinc-300 uppercase tracking-widest">
               {logo.name}
             </span>
           </div>
