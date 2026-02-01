@@ -22,25 +22,21 @@ const Footer = () => {
             </div>
 
             <div className="flex gap-8 my-5">
-                <a href="#" className="hover:text-[#00f2ad] transition-colors text-2xl"><FaGithub /></a>
-                <a href="#" className="hover:text-[#00f2ad] transition-colors text-2xl"><FaTwitter /></a>
-                <a href="#" className="hover:text-[#00f2ad] transition-colors text-2xl"><FaLinkedinIn /></a>
-                <Link 
+                <a href="https://github.com/anisha-max" className="hover:text-[#00f2ad] transition-colors text-2xl"><FaGithub /></a>
+                <a href="https://x.com/anisha_par23007" className="hover:text-[#00f2ad] transition-colors text-2xl"><FaTwitter /></a>
+                <a href="https://www.linkedin.com/in/anisha-parmar-997160309/" className="hover:text-[#00f2ad] transition-colors text-2xl"><FaLinkedinIn /></a>
+                {/* <Link 
                     className="text-[#00f2ad] hover:text-white transition-colors text-2xl cursor-pointer"
                 >
                     <FaMagic />
-                </Link>
+                </Link> */}
             </div>
 
-            <div className="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div className="border-t border-gray-800 pt-6 text-center gap-4">
                 <p className="text-gray-500 text-sm">
                      © 2026 By Anisha Parmar. All rights reserved.
                 </p>
-                
-                <div className="flex gap-6 text-sm text-gray-400">
-                    <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-                    <a href="#" className="hover:text-white transition-colors">Terms & Conditions</a>
-                </div>
+
             </div>
         </footer>
     );

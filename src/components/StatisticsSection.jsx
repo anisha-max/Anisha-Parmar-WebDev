@@ -45,8 +45,8 @@ useGSAP(() => {
 }, { scope: containerRef });
 
   return (
-    <section ref={containerRef} className=" text-white py-16 px-6">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-32">
+    <section ref={containerRef} className=" text-white py-4 lg:py-16 px-4 lg:px-2">
+      <div className="max-w-6xl mx-auto grid grid-cols-1  md:grid-cols-4 gap-8 mb-5 md:mb-16">
         {stats.map((stat, index) => (
           <div key={index} className="border-l-2 border-gray-800  pl-6 space-y-6">
             <h4 className=" font-bold leading-tight min-h-10">
@@ -76,7 +76,7 @@ useGSAP(() => {
         </div>
         
         <div className="lg:col-span-6">
-          <p className="text-5xl font-bold leading-tight max-w-md mx-auto">
+          <p className="text-5xl font-bold leading-tight lg:max-w-md mx-auto">
            Building High-Performance, Scalable Digital Experiences
           </p>
         </div>

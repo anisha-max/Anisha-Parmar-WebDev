@@ -6,7 +6,7 @@ import TechSlider from '../components/TechSlider'
 function About() {
   return (
  <>
-    <div className='py-10'>
+    <div className='py-16'>
       <AboutMe/>
       <Intrests/>
     </div>

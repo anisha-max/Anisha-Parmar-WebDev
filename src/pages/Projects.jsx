@@ -1,12 +1,12 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import Slider from "react-slick";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
+
 import { HiOutlineArrowLeft, HiOutlineArrowRight } from "react-icons/hi2";
-import { FaGithub } from "react-icons/fa";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import ProjectCardProject from '../components/ProjectCardProject';
+import SliderProjectCard from '../components/SliderProjectCard';
 
 
 const NextArrow = ({ onClick }) => (
@@ -27,125 +27,128 @@ const PrevArrow = ({ onClick }) => (
   </button>
 );
 
-const ProjectCard = ({ project }) => {
-  const container = useRef();
-  const overlayRef = useRef();
-  const contentRef = useRef();
-
-  useGSAP(() => {
-    gsap.set(overlayRef.current, { opacity: 0 });
-    gsap.set(contentRef.current, { y: 40, opacity: 0 });
-
-    const tl = gsap.timeline({ paused: true });
-    tl.to(overlayRef.current, { opacity: 1, duration: 0.4, ease: "power2.out" })
-      .to(contentRef.current, { y: 0, opacity: 1, duration: 0.4, ease: "power3.out" }, "-=0.2");
-
-    const el = container.current;
-    const handleEnter = () => tl.play();
-    const handleLeave = () => tl.reverse();
-
-    el.addEventListener("mouseenter", handleEnter);
-    el.addEventListener("mouseleave", handleLeave);
-
-    return () => {
-      el.removeEventListener("mouseenter", handleEnter);
-      el.removeEventListener("mouseleave", handleLeave);
-    };
-  }, { scope: container });
-
-  return (
-    <div ref={container} className="px-3 outline-none">
-      <div className="relative h-130 rounded-[2.5rem] overflow-hidden cursor-pointer border border-zinc-800 bg-zinc-900 shadow-xl">
-        <img
-          src={project.image}
-          alt={project.title}
-          className="absolute inset-0 w-full h-full object-cover grayscale-10 group-hover:grayscale-0 transition-all duration-700"
-        />
-
-        <div
-          ref={overlayRef}
-          className="absolute inset-0 bg-black/50 flex flex-col justify-end p-10 z-10"
-        >
-          <div ref={contentRef}>
-            <h3 className="text-3xl font-bold text-white mb-3 tracking-tight">{project.title}</h3>
-            <p className="text-white text-sm mb-8 leading-relaxed line-clamp-3">
-              {project.description}
-            </p>
-
-            <div className="flex items-center justify-between pt-6 border-t border-white/10">
-              <div className="flex flex-wrap gap-3">
-                {project.technologies.map((tech, i) => (
-                  <span key={i} className="text-[11px] font-bold uppercase tracking-[0.2em] text-emerald-500">
-                    {tech}
-                  </span>
-                ))}
-              </div>
-
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noreferrer"
-                className="bg-emerald-500 p-3.5 rounded-full text-black hover:scale-110 active:scale-95 transition-all shadow-lg shadow-emerald-500/20"
-                onClick={(e) => e.stopPropagation()}
-              >
-                <FaGithub size={24} />
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
 const Projects = () => {
   const projects = [
-    { title: "Dancing Dunes", image: "https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=800", description: "Capturing the breathtaking beauty of sand dunes through artistic lensmanship and clean design.", technologies: ["React", "GSAP"], github: "#" },
-    { title: "Mountain Peaks", image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800", description: "A high-performance exploration of landscapes using modern frontend frameworks and scalable tools.", technologies: ["Next.js", "Tailwind"], github: "#" },
-    { title: "Ocean Blue", image: "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=800", description: "Visually consistent web experiences that support long-term growth and high performance best practices.", technologies: ["Three.js", "React"], github: "#" },
-    { title: "Forest Edge", image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800", description: "Modular landing page structures with strong visual hierarchy and clear digital messaging.", technologies: ["Vite", "Prisma"], github: "#" },
-    { title: "Urban Sky", image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800", description: "Modern and conversion-optimized interfaces designed for digital products and startups.", technologies: ["Node.js", "SQL"], github: "#" },
+    {
+      id: 1,
+      title: "Real time ride booking Web application",
+      image: "/uber2.png",
+      description:
+        "A full-stack, real-time ride booking application inspired by Uber, featuring live location tracking, ride requests, driver matching, and socket-based updates for seamless user–driver communication.",
+      technologies: ["React", "GSAP", "MongoDb", "Nodejs", "ExpressJS", "Tailwind"],
+      github: "https://github.com/anisha-max/uber-clone",
+      live: "https://uber-clone-frontend-2ubg.onrender.com"
+    },
+    {
+      id: 2,
+      title: "Video straming Platform like youtube",
+      image: "/project.jpg",
+      description:
+        "A scalable video streaming platform similar to YouTube, supporting video uploads, playback, and responsive layouts with optimized performance and modern UI patterns.",
+      technologies: ["Next.js", "Tailwind", "Imagekit", "NextAuth", "MongoDb"],
+      github: "https://github.com/anisha-max/Fullstack-youtube-application",
+      live: "https://fullstack-video-application.onrender.com"
+    },
+    {
+      id: 3,
+      title: "Portfolio",
+      image: "/portfolio.png",
+      description:
+        "A personal developer portfolio showcasing projects, skills, and experience with smooth animations and a strong focus on performance and visual clarity.",
+      technologies: ["React", "Tailwind", "GSAP"],
+      github: "https://github.com/anisha-max/Anisha-Parmar-WebDev",
+      live: "https://anisha-parmar-webdev.onrender.com"
+    },
+    {
+      id: 4,
+      title: "Company Project(Frontend Developer) - Fintech Web application",
+      image: "/bbps.png",
+      description:"Worked on a company project designing the frontend of a fintech web application, focusing on user interfaces, seamless user experience, and integrating features like authentication flows, role-based access controls, and financial data presentation.",
+      technologies: ["React", "Tailwind"],
+      live: "https://utility.finuniques.in"
+
+    },
+    {
+      id: 5,
+      title: "Company Project(Frontend Developer)  - Main Website",
+      image: "/sevenunique.png",
+      description:
+        "Collaborated with a team to design and develop the frontend of the company’s main website, focusing on user interface, responsiveness, and smooth user experience.",
+      technologies: ["React", "Tailwind"],
+      live: "https://www.sevenunique.com"
+
+    },
   ];
 
-  const settings = {
-    dots: false,
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    pauseOnHover: true,
-    speed: 800,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
-    responsive: [
-      { breakpoint: 1280, settings: { slidesToShow: 2 } },
-      { breakpoint: 768, settings: { slidesToShow: 1, arrows: false, dots: true } }
-    ]
-  };
+
+const settings = {
+  dots: false,
+  infinite: true,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  pauseOnHover: true,
+  speed: 800,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  nextArrow: <NextArrow />,
+  prevArrow: <PrevArrow />,
+  responsive: [
+    { 
+      breakpoint: 1280, 
+      settings: { slidesToShow: 2 } 
+    },
+    { 
+      breakpoint: 1024, 
+      settings: { slidesToShow: 2 } 
+    },
+    { 
+      breakpoint: 640, 
+      settings: { 
+        slidesToShow: 1, 
+        arrows: false, 
+        dots: true 
+      } 
+    }
+  ]
+};
 
   return (
-    <section className="py-16  overflow-hidden max-w-7xl mx-auto ">
+<>
+    <section className="pt-20 pb-8 lg:pt-26  overflow-hidden max-w-6xl mx-auto text-white">
       <div className=" mx-auto w-full relative">
         <div className="flex flex-col items-center text-center mb-20">
-          <p className="text-5xl md:text-7xl font-serif text-emerald-500 italic mb-8 tracking-tight">
-            My Works
-          </p>
-          <p className="text-zinc-500 max-w-2xl text-lg md:text-xl leading-relaxed">
-            Witness the beauty of nature through our lens, as we showcase stunning
-            landscapes that evoke wonder and appreciation for the environment.
+          <header className="mb-5 text-center">
+            <h1 className="text-5xl font-black mb-4 ">Featured <span className="text-[#00FFCA]">Work</span></h1>
+            <div className="h-1 w-20 bg-[#00FFCA] mx-auto"></div>
+          </header>
+          <p className=" text-lg md:text-xl leading-relaxed">
+            Each project carries a story of learning — moments of confusion, breakthroughs, and quiet progress. From shaping interfaces to building real-time systems, every line of code reflects growth, curiosity, and the journey of becoming a better developer.
           </p>
         </div>
-
-        <div className="relative px-2 md:px-12">
-          <Slider {...settings} className="project-slider overflow-visible">
-            {projects.map((project, index) => (
-              <ProjectCard key={index} project={project} />
+        <div className="min-h-screen   md:py-5 px-6">
+          <section>
+            {projects.map((item, index) => (
+              <ProjectCardProject
+                key={item.id}
+                project={item}
+                isEven={index % 2 === 0}
+              />
             ))}
-          </Slider>
+          </section>
         </div>
       </div>
     </section>
+
+    <section className='max-w-7xl mx-auto pb-16'>
+         <div className="relative px-2 md:px-12">
+          <Slider {...settings} className="project-slider overflow-visible">
+            {projects.map((project, index) => (
+              <SliderProjectCard key={index} project={project} />
+            ))}
+          </Slider>
+        </div>
+    </section>
+    </>
   );
 };
 

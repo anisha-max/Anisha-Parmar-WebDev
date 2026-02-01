@@ -2,8 +2,9 @@ import React, { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { Link } from "react-router-dom";
+import { MdArrowOutward } from "react-icons/md";
 
-const ProjectCard = ({ title, tags, imageSrc ,link}) => {
+const ProjectCardHome = ({ title, tags, imageSrc ,link}) => {
     const cardRef = useRef(null);
     const arrowRef = useRef(null);
 
@@ -33,25 +34,13 @@ const ProjectCard = ({ title, tags, imageSrc ,link}) => {
                     <img
                         src={imageSrc}
                         alt={title}
-                        className="h-full w-full object-cover transition-all duration-700 grayscale group-hover:grayscale-0 group-hover:scale-105"
+                        className="h-full w-full  transition-all duration-700 grayscale group-hover:grayscale-0 group-hover:scale-105"
                     />
                     <div
                         ref={arrowRef}
                         className="pointer-events-none absolute left-0 top-0 flex h-20 w-20 items-center justify-center rounded-full bg-[#00FFCA] text-black opacity-0 transition-opacity duration-300 group-hover:opacity-100 z-10"
                     >
-                        <svg
-                            width="32"
-                            height="32"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2.5"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                        >
-                            <line x1="7" y1="17" x2="17" y2="7"></line>
-                            <polyline points="7 7 17 7 17 17"></polyline>
-                        </svg>
+                        <MdArrowOutward size={24} />
                     </div>
 
          
@@ -61,8 +50,8 @@ const ProjectCard = ({ title, tags, imageSrc ,link}) => {
                 </div>
 
   
-                <div className="flex items-start justify-between">
-                    <h3 className="text-2xl font-bold text-white max-w-62 leading-tight">
+                <div className="md:flex items-start justify-between">
+                    <h3 className="text-2xl font-bold text-white max-w-62 leading-tight  pb-4 md:pb-0">
                         {title}
                     </h3>
 
@@ -81,4 +70,4 @@ const ProjectCard = ({ title, tags, imageSrc ,link}) => {
     );
 };
 
-export default ProjectCard;
+export default ProjectCardHome;

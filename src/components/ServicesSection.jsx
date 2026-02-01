@@ -24,14 +24,14 @@ const services = [
 
 
     return (
-        <section className=" pt-24 py-16 px-6 overflow-hidden">
-            <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <section className=" py-8 lg:py-16 overflow-hidden">
+            <div className="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-12 gap-12 items-start">
                 <div className="lg:col-span-4">
                     <div className="space-y-4">
                         {services.map((service, index) => (
                             <div
                                 key={index}
-                                className={`p-6 rounded-2xl transition-all duration-300 flex gap-6 ${service.active
+                                className={`p-6 rounded-2xl transition-all duration-300 md:flex gap-6 ${service.active
                                     ? 'bg-zinc-900/80 border border-zinc-800 shadow-2xl'
                                     : 'bg-transparent border border-transparent'
                                     }`}
@@ -70,7 +70,7 @@ const services = [
                     </div>
                 </div>
 
-                <div className="lg:col-span-4">
+                <div className="hidden lg:block lg:col-span-4">
                     <div className="rounded-3xl overflow-hidden ">
                         <img
                             src="/home4.jpg"

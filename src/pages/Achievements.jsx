@@ -97,11 +97,11 @@ const Achievements = () => {
     }
   ];
 
-  // Logic to find the active content based on state
+ 
   const activeContent = achievements.find((s) => s.id === activeTab) || achievements[0];
 
   return (
-    <div className="bg-[#0f0f0f] text-white min-h-screen p-6 md:p-12 lg:p-20 font-sans">
+    <div className=" text-white min-h-screen pt-26 pb-16 px-4 lg:px-2">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16">
         
         {/* Left Sidebar */}

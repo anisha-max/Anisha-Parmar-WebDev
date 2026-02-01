@@ -29,9 +29,9 @@ const AboutMe = () => {
     }, { scope: containerRef });
 
     return (
-        <section ref={containerRef} className=" text-white py-5">
+        <section ref={containerRef} className=" text-white py-5 px-2 lg:px-0">
      <div className="bg-zinc-900 max-w-7xl mx-auto py-10 rounded-2xl">
-             <div className="max-w-6xl mx-auto">
+             <div className="max-w-6xl mx-auto px-4 lg:px-2">
                 <div className="flex items-center gap-2 mb-2">
                         <span className="w-2 h-2 rounded-full bg-[#00FFCA]"></span>
                         <span className="text-zinc-400 text-sm font-medium uppercase tracking-widest">About Me</span>
@@ -47,8 +47,8 @@ const AboutMe = () => {
                 </p>
             </div>
           </div>
-            <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-                <div className="lg:col-span-3 reveal-img">
+            <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 items-start  px-4 lg:px-2">
+                <div className=" lg:col-span-3 reveal-img">
                     <div className="aspect-4/5 rounded-3xl overflow-hidden">
                         <img src="/home5.jpg" alt="Maxel Morgan" className="w-full h-full object-cover" />
 
@@ -61,7 +61,7 @@ const AboutMe = () => {
                     </div>
                 </div>
 
-                <div className="lg:col-span-5 flex flex-col pt-4">
+                <div className="md:col-span-2 lg:col-span-5 flex flex-col pt-4">
                     <div className="relative">
                         <span className="absolute -left-6 -top-4 text-6xl text-[#00FFCA] font-serif opacity-50">“</span>
                         <h3 className="reveal-text text-4xl font-semibold  relative z-10">
@@ -69,12 +69,12 @@ const AboutMe = () => {
                         </h3>
                     </div>
 
-                    <div className="flex justify-between items-center mt-4">
+                    <div className="md:flex justify-between space-y-4 lg:space-y-0 items-center mt-4">
                      <div>
                            <p className="text-lg font-semibold text-white mb-1">Anisha Parmar</p>
                         <p className="text-[#00FFCA] ">Fullstack Developer</p>
                      </div>
-                                          <Link to="/achievements" className="text-sm bg-zinc-800 hover:bg-white/20 backdrop-blur-md font-semibold text-white px-6 cursor-pointer py-2 h-fit rounded-lg transition-all ">
+                                          <Link to="/achievements" className="text-sm bg-zinc-800 hover:bg-white/20 backdrop-blur-md font-semibold text-white px-6 cursor-pointer py-2  rounded-lg transition-all  ">
                         More About Experience
                     </Link>
                     </div>

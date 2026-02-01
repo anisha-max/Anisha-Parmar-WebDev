@@ -1,11 +1,11 @@
 import React from 'react'
-import { FaGithub, FaLinkedinIn, FaTwitter } from 'react-icons/fa'
+import { FaFileDownload, FaGithub, FaLinkedinIn, FaTwitter } from 'react-icons/fa'
 import ServicesSection from '../components/ServicesSection'
 import StatisticsSection from '../components/StatisticsSection'
-import ProjectCard from '../components/ProjectCard'
 import { Link } from 'react-router-dom'
 import AboutMe from '../components/AboutMe'
 import TechSlider from '../components/TechSlider'
+import ProjectCardHome from '../components/ProjectCardHome'
 
 function Home() {
 
@@ -13,14 +13,14 @@ function Home() {
     {
       title: "Ride booking web application",
       tags: ["MERN", "Tailwind" ,"Google Map Api" , "Socket.io"],
-      imageSrc: "/homebg.jpg",
-      link: "/"
+      imageSrc: "/uber2.png",
+      link: "/projects"
     },
     {
       title: "Video Streaming Platform",
       tags: ["NextJs" ,"NextAuth", "Tailwind" , "ImageKit"],
-      imageSrc: "/homebg2.jpg",
-      link: "/"
+      imageSrc: "/project.jpg",
+      link: "/projects"
     }
   ];
 
@@ -29,25 +29,25 @@ function Home() {
   return (
     <div className="relative">
       <section
-        className="relative  min-h-screen bg-fixed w-full flex items-center justify-center  bg-center bg-cover bg-no-repeat pb-10"
+        className="relative  min-h-screen bg-fixed w-full flex items-center justify-center  bg-center bg-cover bg-no-repeat pt-20 pb-10 px-4 lg:px-2"
         style={{
           backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.9) 100%), url('/homebg.jpg')`
         }}
       >
         <div className="max-w-7xl mx-auto ">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-40 items-baseline-last">
-            <div className="text-white text-end max-w-md">
-              <p className="text-6xl md:text-9xl font-semibold ">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 lg:gap-40 items-baseline-last">
+            <div className="text-white lg:text-end max-w-md">
+              <p className="text-6xl md:text-8xl lg:text-9xl font-semibold ">
                 Innovate
               </p>
-              <p className="text-6xl md:text-9xl font-semibold  text-transparent bg-clip-text"
+              <p className="text-6xl md:text-8xl lg:text-9xl font-semibold  text-transparent bg-clip-text"
                 style={{
                   WebkitTextStroke: '2px #00f2ad',
                   color: 'transparent'
                 }}>
                 Build
               </p>
-              <p className="text-6xl md:text-9xl font-semibold ">
+              <p className="text-6xl md:text-8xl lg:text-9xl font-semibold ">
                 Deploy
               </p>
 
@@ -62,9 +62,9 @@ function Home() {
               </p>
 
               <div className="flex flex-wrap gap-4 py-4">
-                <button className="bg-zinc-800 hover:bg-white/20 backdrop-blur-md font-semibold text-white px-8 py-3 rounded-md transition-all border border-white/10">
-                  Download Resume
-                </button>
+                <a href="/Anisha_Parmar_FullStack_Resume.pdf" download="Anisha_Parmar_FullStack_Resume" className="bg-zinc-800 hover:bg-white/20 backdrop-blur-md font-semibold text-white px-8 py-3 rounded-md transition-all border border-white/10 inline-flex gap-2 items-center">
+                  Download Resume <FaFileDownload  className='animate-bounce'/>
+                </a>
                 <Link to="/projects" className="border border-[#00f2ad] hover:bg-[#00f2ad] font-semibold hover:text-black text-white px-8 py-3 rounded-md transition-all">
                   View Projects
                 </Link>
@@ -75,9 +75,9 @@ function Home() {
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
             <p className='text-white font-semibold'>Anisha Parmar — Software Developer</p>
           </div>
-          <div className='lg:flex justify-between text-gray-300 pt-10'>
-            <div className='border-l-2 px-5 border-[#00f2ad] max-w-md'>
-              Passionate Frontend Developer with 1+ year of experience, expanding into full-stack development.
+          <div className='md:flex justify-between text-gray-300 pt-10'>
+            <div className='border-l-2 px-5 border-[#00f2ad] max-w-md pb-5 md:pb-0'>
+          Frontend Expert | Full-Stack Enthusiast. 1+ year of engineering clean, scalable code for real-world applications. Transforming complex requirements into seamless digital experiences.
             </div>
             <div className='flex justify-around gap-5'>
               <div className='flex items-center gap-2'>
@@ -87,7 +87,7 @@ function Home() {
                 <a href="https://www.linkedin.com/in/anisha-parmar-997160309/" target='_blank' className="text-[#00f2ad] hover:text-gray-300 transition-colors text-lg border border-gray-600 rounded-md p-1"><FaLinkedinIn /></a> Linkedin
               </div>
               <div className='flex items-center gap-2'>
-                <a href="https://x.com/anisha_par23007" target='_blank' className="text-[#00f2ad] hover:text-gray-300 transition-colors text-lg border border-gray-600 rounded-md p-1"><FaTwitter /></a> Tweeter
+                <a href="https://x.com/anisha_par23007" target='_blank' className="text-[#00f2ad] hover:text-gray-300 transition-colors text-lg border border-gray-600 rounded-md p-1"><FaTwitter /></a> Twitter
 
               </div>
             </div>
@@ -96,13 +96,13 @@ function Home() {
         </div>
       </section>
 
-      <section className=" bg-zinc-950  text-white py-16">
+      <section className=" text-white py-16  px-4 lg:px-2">
         <div className='max-w-6xl mx-auto mb-5'>
           <div className='lg:grid lg:grid-cols-3'>
             <div className='lg:col-span-1'>
-              <div className='flex items-center gap-2'>
+              <div className='flex items-center gap-2 pb-2 md:py-0'>
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                <p className='font-semibold text-lg'>
+                <p className='font-semibold text-lg '>
                   My Core Expertise
                 </p>
               </div>
@@ -121,9 +121,9 @@ function Home() {
       <StatisticsSection />
 
 
-      <section className='max-w-6xl mx-auto'>
+      <section className='max-w-6xl mx-auto px-4 lg:px-2'>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          {projects.map((p, i) => <ProjectCard key={i} {...p} />)}
+          {projects.map((p, i) => <ProjectCardHome key={i} {...p} />)}
         </div>
         <p className='text-white font-medium py-16 text-center'>
           Have a project in mind? <Link to="/contact" className='brand-color'>

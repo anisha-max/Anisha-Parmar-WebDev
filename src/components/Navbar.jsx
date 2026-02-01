@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
 import { Link, NavLink } from 'react-router-dom';
 import { useGSAP } from "@gsap/react";
@@ -27,7 +27,7 @@ const Navbar = () => {
             .to(
                 contentRef.current,
                 {
-                    x: "0%",
+                    x: "100%",
                     duration: 0.8,
                     ease: "expo.out"
                 },
@@ -43,53 +43,66 @@ const Navbar = () => {
             tlRef.current.reverse();
         }
     }, [isOpen]);
-
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth >= 768) {
+                setIsOpen(false);
+            }
+        };
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     return (
         <>
-            <nav className="bg-black ">
-               <div className='max-w-7xl mx-auto text-white px-5 md:px-10  lg:px-0 py-3 flex items-center justify-between'>
-                 <div className="flex items-center text-2xl md:text-3xl font-bold tracking-tight">
-                    <span className='z-10'>Web</span>
-                    <span className=' bg-[#00f2ad] -ms-1 rounded-3xl  shadow-[0_0_15px_rgba(0,242,173,0.5)] px-1 mt-3'>
-                        Dev
-                    </span>
+        <nav className="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-[#00f2ad]/10 shadow-[0_10px_30px_-15px_rgba(0,242,173,0.3)]">
+                <div className='max-w-7xl mx-auto text-white px-5 md:px-10  lg:px-0 py-3 flex items-center justify-between'>
+                    <div className="flex items-center text-2xl md:text-3xl font-bold tracking-tight">
+                        <span className='z-10'>Web</span>
+                        <span className=' bg-[#00f2ad] -ms-1 rounded-3xl  shadow-[0_0_15px_rgba(0,242,173,0.5)] px-1 mt-3'>
+                            Dev
+                        </span>
+                    </div>
+
+
+                    <div className="hidden md:flex items-center gap-8">
+                        {navLinks.map((link) => (
+                            <NavLink to={link.to} key={link.name}
+                                className={({ isActive }) =>
+                                    ` flex items-center gap-1 cursor-pointer group text-[15px] font-medium hover:text-white transition-color ${isActive ? 'brand-color' : 'text-gray-300'
+                                    }`
+                                }>
+                                {link.name}
+
+                            </NavLink>
+                        ))}
+                    </div>
+                    <div className="md:hidden">
+                        <button onClick={() => setIsOpen(!isOpen)} className="text-2xl">
+                            <FaBars />
+                        </button>
+                    </div>
+
+                    <Link to="/contact" className="group hidden md:flex items-center gap-2 border-2  border-[#00f2ad] hover:bg-[#00f2ad]  hover:border-[#1e1e1e] hover:text-black rounded-full pl-6 pr-2 py-2 transition-all duration-300">
+                        <span className="text-sm font-semibold">Contact</span>
+                        <IoArrowForwardCircleOutline
+                            size={28}
+                            className="text-[#00f2ad] group-hover:bg-[#00f2ad] group-hover:text-black rounded-full transition-all"
+                        />
+                    </Link>
                 </div>
-
-
-                <div className="hidden lg:flex items-center gap-8">
-                    {navLinks.map((link) => (
-                        <NavLink to={link.to} key={link.name}
-                            className={({ isActive }) =>
-                                ` flex items-center gap-1 cursor-pointer group text-[15px] font-medium hover:text-white transition-color ${isActive ? 'brand-color' : 'text-gray-300'
-                                }`
-                            }>
-                            {link.name}
-
-                        </NavLink>
-                    ))}
-                </div>
-                <div className="lg:hidden">
-                    <button onClick={() => setIsOpen(!isOpen)} className="text-2xl">
-                        <FaBars />
-                    </button>
-                </div>
-
-                <Link to="/contact" className="group hidden lg:flex items-center gap-2 border-2  border-[#00f2ad] hover:bg-[#00f2ad]  hover:border-[#1e1e1e] hover:text-black rounded-full pl-6 pr-2 py-2 transition-all duration-300">
-                    <span className="text-sm font-semibold">Contact</span>
-                    <IoArrowForwardCircleOutline
-                        size={28}
-                        className="text-[#00f2ad] group-hover:bg-[#00f2ad] group-hover:text-black rounded-full transition-all"
-                    />
-                </Link>
-               </div>
             </nav>
             <div
                 ref={overlay}
-                className='fixed top-0 -left-full w-full h-screen bg-black/50 z-40 lg:hidden'
+                className='fixed top-0 -left-full w-full h-screen bg-black/60 z-60 md:hidden'
+                onClick={() => setIsOpen(false)}
             >
-                <div ref={contentRef} className='bg-[#1e1e1e] flex flex-col px-5 py-6 gap-8 h-screen w-[80vw] -translate-x-full'>
-                    <div className='flex justify-between text-white font-bold'>
+                <div
+                    ref={contentRef}
+                    onClick={(e) => e.stopPropagation()}
+                    className='bg-[#121212] h-screen w-[75vw] -left-[75vw] absolute border-r border-white/10 px-4'
+                >
+                    <div className='flex justify-between text-white font-bold py-6'>
                         <div className="flex items-center text-2xl md:text-3xl font-bold tracking-tight">
                             <span className='z-10'>Web</span>
                             <span className=' bg-[#00f2ad] -ms-1 rounded-3xl  shadow-[0_0_15px_rgba(0,242,173,0.5)] px-1 mt-3'>
@@ -100,7 +113,8 @@ const Navbar = () => {
                             <FaTimes />
                         </button>
                     </div>
-                    {navLinks.map((link) => (
+                   <div className='flex flex-col gap-3'>
+                     {navLinks.map((link) => (
                         <NavLink
                             onClick={() => setIsOpen(false)}
                             to={link.to}
@@ -110,6 +124,13 @@ const Navbar = () => {
                             {link.name}
                         </NavLink>
                     ))}
+                    <NavLink  onClick={() => setIsOpen(false)}
+                            to="/contact"
+                            className=" text-white hover:text-[#00f2ad]"
+                        >
+                            Contact
+                    </NavLink>
+                    </div>
                 </div>
             </div>
         </>
