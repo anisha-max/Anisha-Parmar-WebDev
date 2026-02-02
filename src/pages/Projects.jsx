@@ -42,7 +42,7 @@ const Projects = () => {
     {
       id: 2,
       title: "Video straming Platform like youtube",
-      image: "/project.jpg",
+      image: "/videoapp.png",
       description:
         "A scalable video streaming platform similar to YouTube, supporting video uploads, playback, and responsive layouts with optimized performance and modern UI patterns.",
       technologies: ["Next.js", "Tailwind", "Imagekit", "NextAuth", "MongoDb"],

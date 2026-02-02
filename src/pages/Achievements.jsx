@@ -69,7 +69,7 @@ const Achievements = () => {
       title: "Successfully Deployed Video Streaming Apps",
       date: "Oct 2024",
       description: "Implemented high-performance video streaming capabilities with real-time media handling and cloud-based storage integration.",
-      image: "/project.jpg",
+      image: "/videoapp.png",
       category: "Live projects",
       tags: ["Next.js", "MongoDB", "NextAuth", "ImageKit", "Full-Stack"],
       points: [

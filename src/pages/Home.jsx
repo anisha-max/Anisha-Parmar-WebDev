@@ -19,7 +19,7 @@ function Home() {
     {
       title: "Video Streaming Platform",
       tags: ["NextJs" ,"NextAuth", "Tailwind" , "ImageKit"],
-      imageSrc: "/project.jpg",
+      imageSrc: "/videoapp.png",
       link: "/projects"
     }
   ];
