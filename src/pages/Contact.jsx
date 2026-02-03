@@ -46,7 +46,7 @@ const Contact = () => {
   };
 
   return (
-    <section ref={container} className="py-16 relative overflow-hidden ">
+    <section ref={container} className="pb-16 pt-26 relative overflow-hidden ">
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12  relative z-10">
         <div className='lg:px-8'>
           <div className="bg-[#161616] p-8 md:p-12 rounded-2xl ">
