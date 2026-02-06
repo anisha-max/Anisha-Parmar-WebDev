@@ -62,7 +62,7 @@ function Home() {
               </p>
 
               <div className="flex flex-wrap gap-4 py-4">
-                <a href="/Anisha_Parmar_FullStack_Resume.pdf" download="Anisha_Parmar_FullStack_Resume" className="bg-zinc-800 hover:bg-white/20 backdrop-blur-md font-semibold text-white px-8 py-3 rounded-md transition-all border border-white/10 inline-flex gap-2 items-center">
+                <a href="/Anisha_Parmar_Fullstack_Developer.pdf" download="Anisha_Parmar_Fullstack_Developer" className="bg-zinc-800 hover:bg-white/20 backdrop-blur-md font-semibold text-white px-8 py-3 rounded-md transition-all border border-white/10 inline-flex gap-2 items-center">
                   Download Resume <FaFileDownload  className='animate-bounce'/>
                 </a>
                 <Link to="/projects" className="border border-[#00f2ad] hover:bg-[#00f2ad] font-semibold hover:text-black text-white px-8 py-3 rounded-md transition-all">
