@@ -61,9 +61,9 @@ const Projects = () => {
     },
     {
       id: 4,
-      title: "Company Project(Frontend Developer) - Fintech Web application",
+      title: "Company Project(Frontend Developer Role) - Fintech Web application",
       image: "/bbps.png",
-      description:"Worked on a company project designing the frontend of a fintech web application, focusing on user interfaces, seamless user experience, and integrating features like authentication flows, role-based access controls, and financial data presentation.",
+      description:"Worked with team on a company project designing the frontend of a fintech web application, focusing on user interfaces, seamless user experience.",
       technologies: ["React", "Tailwind"],
       live: "https://utility.finuniques.in"
 
