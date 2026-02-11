@@ -10,6 +10,7 @@ const Navbar = () => {
         { name: 'Home', to: "/" },
         { name: 'About Me', to: "/about" },
         { name: 'Achievements', to: "/achievements" },
+        { name: 'Services', to: "/services" },
         { name: 'Projects', to: "/projects" },
     ];
     const [isOpen, setIsOpen] = useState(false);
@@ -55,7 +56,7 @@ const Navbar = () => {
 
     return (
         <>
-        <nav className="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-[#00f2ad]/10 shadow-[0_10px_30px_-15px_rgba(0,242,173,0.3)]">
+            <nav className="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-[#00f2ad]/10 shadow-[0_10px_30px_-15px_rgba(0,242,173,0.3)]">
                 <div className='max-w-7xl mx-auto text-white px-5 md:px-10  lg:px-0 py-3 flex items-center justify-between'>
                     <div className="flex items-center text-2xl md:text-3xl font-bold tracking-tight">
                         <span className='z-10'>Web</span>
@@ -113,23 +114,23 @@ const Navbar = () => {
                             <FaTimes />
                         </button>
                     </div>
-                   <div className='flex flex-col gap-3'>
-                     {navLinks.map((link) => (
-                        <NavLink
-                            onClick={() => setIsOpen(false)}
-                            to={link.to}
-                            key={link.name}
-                            className=" text-white hover:text-[#00f2ad]"
-                        >
-                            {link.name}
-                        </NavLink>
-                    ))}
-                    <NavLink  onClick={() => setIsOpen(false)}
+                    <div className='flex flex-col gap-3'>
+                        {navLinks.map((link) => (
+                            <NavLink
+                                onClick={() => setIsOpen(false)}
+                                to={link.to}
+                                key={link.name}
+                                className=" text-white hover:text-[#00f2ad]"
+                            >
+                                {link.name}
+                            </NavLink>
+                        ))}
+                        <NavLink onClick={() => setIsOpen(false)}
                             to="/contact"
                             className=" text-white hover:text-[#00f2ad]"
                         >
                             Contact
-                    </NavLink>
+                        </NavLink>
                     </div>
                 </div>
             </div>

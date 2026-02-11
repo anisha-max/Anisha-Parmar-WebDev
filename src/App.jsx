@@ -5,6 +5,8 @@ import About from './pages/About'
 import Achievements from './pages/Achievements'
 import Projects from './pages/Projects'
 import Contact from './pages/Contact'
+import Services from './pages/Services'
+import ScrollToTop from './components/ScrollToTop'
 
 
 function App() {
@@ -12,12 +14,14 @@ function App() {
 
   return (
     <>
+    <ScrollToTop />
       <Routes>
         <Route path='/' element={<Home />} />
-         <Route path='/about' element={<About />} />
-          <Route path='/achievements' element={<Achievements />} />
-          <Route path='/projects' element={<Projects />} />
-               <Route path='/contact' element={<Contact />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/achievements' element={<Achievements />} />
+        <Route path='/projects' element={<Projects />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/services' element={<Services key={location.pathname}/>} />
       </Routes>
     </>
   )
