@@ -46,39 +46,39 @@ const Achievements = () => {
         "Effective Team Communication"
       ],
     },
-    {
-      id: "Project milestones",
-      icon: <MdOutlineRocketLaunch />,
-      title: "Deployed Ride Booking Web Apps",
-      date: "June 2025",
-      description: "End-to-end development and deployment of scalable full-stack web applications on Render using Next.js and MongoDB. Implemented secure user authentication and dynamic routing.",
-      image: "/uber.png",
-      category: "Live projects",
-      tags: ["Next.js", "Socket.io", "Google Map Api", "Deployment"],
-      points: [
-        "Real-time Data Handling",
-        "Secure Authentication Systems",
-        "Cloud-based Deployment (Render)",
-        "Dynamic Route Optimization"
-      ],
-      link: "https://fullstack-video-application.onrender.com",
-    },
-    {
-      id: "Learning milestones",
-      icon: <MdOutlineAutoGraph />,
-      title: "Successfully Deployed Video Streaming Apps",
-      date: "Oct 2024",
-      description: "Implemented high-performance video streaming capabilities with real-time media handling and cloud-based storage integration.",
-      image: "/videoapp.png",
-      category: "Live projects",
-      tags: ["Next.js", "MongoDB", "NextAuth", "ImageKit", "Full-Stack"],
-      points: [
-        "Cloud-based Media Storage",
-        "Real-time Media Processing",
-        "Secure User Sessions (NextAuth)",
-        "Optimized Video Playback"
-      ],
-    },
+    // {
+    //   id: "Project milestones",
+    //   icon: <MdOutlineRocketLaunch />,
+    //   title: "Deployed Ride Booking Web Apps",
+    //   date: "June 2025",
+    //   description: "End-to-end development and deployment of scalable full-stack web applications on Render using Next.js and MongoDB. Implemented secure user authentication and dynamic routing.",
+    //   image: "/uber.png",
+    //   category: "Live projects",
+    //   tags: ["Next.js", "Socket.io", "Google Map Api", "Deployment"],
+    //   points: [
+    //     "Real-time Data Handling",
+    //     "Secure Authentication Systems",
+    //     "Cloud-based Deployment (Render)",
+    //     "Dynamic Route Optimization"
+    //   ],
+    //   link: "https://fullstack-video-application.onrender.com",
+    // },
+    // {
+    //   id: "Learning milestones",
+    //   icon: <MdOutlineAutoGraph />,
+    //   title: "Successfully Deployed Video Streaming Apps",
+    //   date: "Oct 2024",
+    //   description: "Implemented high-performance video streaming capabilities with real-time media handling and cloud-based storage integration.",
+    //   image: "/videoapp.png",
+    //   category: "Live projects",
+    //   tags: ["Next.js", "MongoDB", "NextAuth", "ImageKit", "Full-Stack"],
+    //   points: [
+    //     "Cloud-based Media Storage",
+    //     "Real-time Media Processing",
+    //     "Secure User Sessions (NextAuth)",
+    //     "Optimized Video Playback"
+    //   ],
+    // },
     {
       id: "Certificate",
       icon: <MdOutlineWorkspacePremium />,

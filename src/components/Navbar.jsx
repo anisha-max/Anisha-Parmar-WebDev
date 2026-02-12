@@ -8,10 +8,11 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 const Navbar = () => {
     const navLinks = [
         { name: 'Home', to: "/" },
-        { name: 'About Me', to: "/about" },
-        { name: 'Achievements', to: "/achievements" },
-        { name: 'Services', to: "/services" },
         { name: 'Projects', to: "/projects" },
+        { name: 'About Me', to: "/about" },
+        { name: 'Resume', to: "/resume" },
+        { name: 'Achievements', to: "/achievements" },
+
     ];
     const [isOpen, setIsOpen] = useState(false);
     const overlay = useRef(null)
@@ -67,16 +68,29 @@ const Navbar = () => {
 
 
                     <div className="hidden md:flex items-center gap-8">
-                        {navLinks.map((link) => (
-                            <NavLink to={link.to} key={link.name}
-                                className={({ isActive }) =>
-                                    ` flex items-center gap-1 cursor-pointer group text-[15px] font-medium hover:text-white transition-color ${isActive ? 'brand-color' : 'text-gray-300'
-                                    }`
-                                }>
-                                {link.name}
+                        {navLinks.map((link) =>
+                            link.name === "Resume" ? (
+                                <a
+                                    key={link.name}
+                                    href="/Anisha_Parmar_Fullstack_Developer.pdf" download="Anisha_Parmar_Fullstack_Developer"
+                                    className="text-gray-300 hover:text-white text-[15px] font-medium"
+                                >
+                                    Resume
+                                </a>
+                            ) : (
+                                <NavLink
+                                    key={link.name}
+                                    to={link.to}
+                                    className={({ isActive }) =>
+                                        `text-[15px] font-medium ${isActive ? 'brand-color' : 'text-gray-300'
+                                        }`
+                                    }
+                                >
+                                    {link.name}
+                                </NavLink>
+                            )
+                        )}
 
-                            </NavLink>
-                        ))}
                     </div>
                     <div className="md:hidden">
                         <button onClick={() => setIsOpen(!isOpen)} className="text-2xl">

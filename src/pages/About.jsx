@@ -1,14 +1,12 @@
 import React from 'react'
 import AboutMe from '../components/AboutMe'
-import Intrests from '../components/Intrests'
 import TechSlider from '../components/TechSlider'
 
 function About() {
   return (
  <>
-    <div className='py-16'>
+    <div className='pt-16'>
       <AboutMe/>
-      <Intrests/>
     </div>
     <TechSlider/>
  </>

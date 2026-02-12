@@ -7,6 +7,7 @@ import Projects from './pages/Projects'
 import Contact from './pages/Contact'
 import Services from './pages/Services'
 import ScrollToTop from './components/ScrollToTop'
+import ProjectDetail from './pages/ProjectDetail'
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path='/projects' element={<Projects />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/services' element={<Services key={location.pathname}/>} />
+         <Route path="/projects/:slug" element={<ProjectDetail/>} />
       </Routes>
     </>
   )

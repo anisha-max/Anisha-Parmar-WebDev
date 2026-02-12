@@ -67,7 +67,7 @@ useGSAP(() => {
           </div>
         ))}
       </div>
-      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 ">
+      <div className="max-w-6xl mx-auto flex justify-between mt-10">
         <div className="lg:col-span-3">
           <div className="flex items-center gap-2 text-lg  text-white font-semibold">
             <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
@@ -75,20 +75,23 @@ useGSAP(() => {
           </div>
         </div>
         
-        <div className="lg:col-span-6">
+        {/* <div className="lg:col-span-6">
           <p className="text-5xl font-bold leading-tight lg:max-w-md mx-auto">
            Building High-Performance, Scalable Digital Experiences
           </p>
-        </div>
+        </div> */}
 
-        <div className="lg:col-span-3 flex flex-col justify-between">
+      <Link to="/projects" className="border border-[#00f2ad] hover:bg-[#00f2ad] font-semibold py-3 px-8 hover:text-black text-white rounded-md transition-all ms-auto">
+                  View All Projects
+                </Link>
+        {/* <div className="lg:col-span-3 flex flex-col justify-between">
                    <Link to="/projects" className="border border-[#00f2ad] hover:bg-[#00f2ad] font-semibold py-3 px-8 hover:text-black text-white rounded-md transition-all ms-auto">
                   View All Projects
                 </Link>
           <p className="text-gray-400 pt-5">
        Each project demonstrates a thoughtful approach to problem-solving and user experience. I specialize in creating fast, scalable, and visually polished web solutions.
           </p>
-        </div>
+        </div> */}
       </div>
     </section>
   );

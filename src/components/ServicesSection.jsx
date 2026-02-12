@@ -24,7 +24,7 @@ const services = [
 
 
     return (
-        <section className=" py-8 lg:py-16 overflow-hidden">
+        <section className=" py-8 lg:pt-16 overflow-hidden">
             <div className="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-12 gap-12 items-start">
                 <div className="lg:col-span-4">
                     <div className="space-y-4">

@@ -9,7 +9,7 @@ const ProjectCardProject = ({ project, isEven }) => {
         <div className="relative group">
           <div className="absolute -inset-1 bg-[#00FFCA] rounded-2xl blur opacity-10 group-hover:opacity-30 transition duration-500"></div>
           <img
-            src={project.image}
+            src={project.images[0]}
             alt={project.title}
             className="relative rounded-2xl border border-white/10 w-full md:max-h-[60vh] shadow-2xl"
           />
@@ -25,11 +25,11 @@ const ProjectCardProject = ({ project, isEven }) => {
         </h2>
 
         <p className="text-gray-400 text-lg leading-relaxed">
-          {project.description}
+      {project.description.slice(0, 200)}...
         </p>
 
         <div className="flex flex-wrap gap-2 pt-2">
-          {project.technologies.map((t, i) => (
+          {project.techStack.map((t, i) => (
             <span key={i} className="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-gray-300 text-sm">
               {t}
             </span>
@@ -40,9 +40,10 @@ const ProjectCardProject = ({ project, isEven }) => {
           <a href={project.live} target="_blank" className="cursor-pointer px-8 py-3 bg-[#00FFCA] text-black font-bold rounded-lg hover:shadow-[0_0_20px_rgba(0,255,202,0.4)] transition-all">
             View Live →
           </a>
-          {project.github && (
+          <Link  to={`/projects/${project.slug}`} className=' px-8 py-3 bg-[#00FFCA] text-black font-bold rounded-lg hover:shadow-[0_0_20px_rgba(0,255,202,0.4)] transition-all'>Details</Link>
+             {project.githubLink && (
             <a
-              href={project.github}
+              href={project.githubLink}
               target="_blank"
               rel="noreferrer"
               className="bg-[#00FFCA] p-3.5 rounded-full text-black hover:scale-110 active:scale-95 transition-all shadow-lg shadow-[#00FFCA]/20"
