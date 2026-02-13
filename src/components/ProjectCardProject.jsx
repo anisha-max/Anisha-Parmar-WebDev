@@ -36,17 +36,17 @@ const ProjectCardProject = ({ project, isEven }) => {
           ))}
         </div>
 
-        <div className='flex items-center gap-3 mt-4 '>
-          <a href={project.live} target="_blank" className="cursor-pointer px-8 py-3 bg-[#00FFCA] text-black font-bold rounded-lg hover:shadow-[0_0_20px_rgba(0,255,202,0.4)] transition-all">
+        <div className='flex flex-col md:flex-row md:items-center gap-3 mt-4 '>
+          <a href={project.liveLink} target="_blank" className="cursor-pointer px-8 py-3 bg-[#00FFCA] text-black font-bold rounded-lg hover:shadow-[0_0_20px_rgba(0,255,202,0.4)] transition-all w-fit">
             View Live →
           </a>
-          <Link  to={`/projects/${project.slug}`} className=' px-8 py-3 bg-[#00FFCA] text-black font-bold rounded-lg hover:shadow-[0_0_20px_rgba(0,255,202,0.4)] transition-all'>Details</Link>
+          <Link  to={`/projects/${project.slug}`} className=' px-8 py-3 bg-[#00FFCA] text-black font-bold rounded-lg hover:shadow-[0_0_20px_rgba(0,255,202,0.4)] transition-all w-fit'>Details</Link>
              {project.githubLink && (
             <a
               href={project.githubLink}
               target="_blank"
               rel="noreferrer"
-              className="bg-[#00FFCA] p-3.5 rounded-full text-black hover:scale-110 active:scale-95 transition-all shadow-lg shadow-[#00FFCA]/20"
+              className="bg-[#00FFCA] p-3.5 rounded-full text-black hover:scale-110 active:scale-95 transition-all shadow-lg shadow-[#00FFCA]/20 w-fit"
               onClick={(e) => e.stopPropagation()}
             >
               <FaGithub size={24} />
