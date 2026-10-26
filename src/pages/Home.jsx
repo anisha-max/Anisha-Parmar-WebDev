@@ -56,16 +56,16 @@ function Home() {
 
             <div className="text-white space-y-3 max-w-md ">
               <p className="text-3xl font-semibold">
-                Talk Less , <br /> Ship more.
+                From pixels, <br /> To code.
               </p>
               <p className="text-gray-300 text-lg ">
                 Building high-performance web applications with clean architecture, scalable systems, and a strong focus on real-world impact and user experience.
               </p>
 
               <div className="flex flex-wrap gap-4 py-4">
-                <a href="/Anisha_Parmar_Fullstack_Developer.pdf" download="Anisha_Parmar_Fullstack_Developer" className="bg-zinc-800 hover:bg-white/20 backdrop-blur-md font-semibold text-white px-8 py-3 rounded-md transition-all border border-white/10 inline-flex gap-2 items-center">
+                {/* <a href="/Anisha_Parmar_Fullstack_Developer.pdf" download="Anisha_Parmar_Fullstack_Developer" className="bg-zinc-800 hover:bg-white/20 backdrop-blur-md font-semibold text-white px-8 py-3 rounded-md transition-all border border-white/10 inline-flex gap-2 items-center">
                   Download Resume <FaFileDownload className='animate-bounce' />
-                </a>
+                </a> */}
                 <Link to="/projects" className="border border-[#00f2ad] hover:bg-[#00f2ad] font-semibold hover:text-black text-white px-8 py-3 rounded-md transition-all">
                   View Projects
                 </Link>
@@ -78,7 +78,7 @@ function Home() {
           </div>
           <div className='md:flex justify-between text-gray-300 pt-10'>
             <div className='border-l-2 px-5 border-[#00f2ad] max-w-md pb-5 md:pb-0'>
-              Frontend Expert | Full-Stack Enthusiast.
+              UI/UX & Frontend Expert | Full-Stack Enthusiast.
             </div>
             <div className='flex justify-around gap-5'>
               <div className='flex items-center gap-2'>

@@ -11,7 +11,7 @@ const StatisticsSection = () => {
   const containerRef = useRef(null);
 
 const stats = [
-  { label: "Years of Development Experience", value: 1, suffix: "+" },
+  { label: "Years of Development Experience", value: 2, suffix: "+" },
   { label: "Production-Ready Projects Built", value: 10, suffix: "+" },
   { label: "Tech Stack Experience (MERN, Next.js, etc.)", value: 8, suffix: "+" },
   { label: "Focus on Performance & Maintainability", value: 100, suffix: "%" },

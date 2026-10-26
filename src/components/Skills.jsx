@@ -52,6 +52,20 @@ function Skill() {
             image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
             name: 'CSS3',
             des: 'Styling language to bring web pages to life.',
+        }, {
+            image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg',
+            name: 'Figma',
+            des: 'Collaborative interface design and prototyping tool.',
+        },
+        {
+            image: 'https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/canva.svg',
+            name: 'Canva',
+            des: 'Design tool for creating graphics and visual content.',
+        },
+        {
+            image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-original.svg',
+            name: 'Adobe Illustrator',
+            des: 'Vector graphics editor for creating illustrations and designs.',
         },
         {
             image: '/next.jpg',
